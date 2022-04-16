@@ -1,4 +1,4 @@
-# Project1
+# Password Progress HomeWork
 
 [![Production Workflow](https://github.com/MaxLozada/Project-2/actions/workflows/prod.yml/badge.svg)](https://github.com/MaxLozada/Project-2/actions/workflows/prod.yml)
 
@@ -9,7 +9,6 @@
 
 * [Developmental Deployment](https://p2dev.herokuapp.com/)
 
-Finalizing functions.
 
 To Build with docker compose: docker compose up --build
 To run tests, Lint, and Coverage report use this command: pytest --pylint --cov

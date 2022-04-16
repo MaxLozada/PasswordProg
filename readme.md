@@ -1,7 +1,9 @@
 # Password Progress HomeWork
 
 Status Badge isn't working right now
-but everything does work
+but everything does works
+
+Here is the link to the page with the aditions (https://pwdprogressprod.herokuapp.com/register)
 
 [![Production Workflow](https://github.com/MaxLozada/PasswordProg/actions/workflows/prod.yml/badge.svg)](https://github.com/MaxLozada/PasswordProg/actions/workflows/prod.yml)
 

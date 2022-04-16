@@ -1,5 +1,8 @@
 # Password Progress HomeWork
 
+Status Badge isn't working right now
+but everything does work
+
 [![Production Workflow](https://github.com/MaxLozada/PasswordProg/actions/workflows/prod.yml/badge.svg)](https://github.com/MaxLozada/PasswordProg/actions/workflows/prod.yml)
 
 * [Production Deployment](https://pwdprogressprod.herokuapp.com/)
@@ -8,9 +11,6 @@
 [![Development Workflow](https://github.com/MaxLozada/PasswordProg/actions/workflows/dev.yml/badge.svg)](https://github.com/MaxLozada/PasswordProg/actions/workflows/dev.yml)
 
 * [Developmental Deployment](https://pwdprogressdev.herokuapp.com/)
-
-
-Status Badge isn't working right now
 
 
 To Build with docker compose: docker compose up --build

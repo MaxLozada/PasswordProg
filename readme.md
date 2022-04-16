@@ -1,13 +1,13 @@
 # Password Progress HomeWork
 
-[![Production Workflow](https://github.com/MaxLozada/Project-2/actions/workflows/prod.yml/badge.svg)](https://github.com/MaxLozada/Project-2/actions/workflows/prod.yml)
+[![Production Workflow](https://github.com/MaxLozada/PasswordProg/actions/workflows/prod.yml/badge.svg)](https://github.com/MaxLozada/PasswordProg/actions/workflows/prod.yml)
 
-* [Production Deployment](https://p2production.herokuapp.com/)
+* [Production Deployment](https://pwdprogressprod.herokuapp.com/)
 
 
-[![Development Workflow](https://github.com/MaxLozada/Project-2/actions/workflows/dev.yml/badge.svg)](https://github.com/MaxLozada/Project-2/actions/workflows/dev.yml)
+[![Development Workflow](https://github.com/MaxLozada/PasswordProg/actions/workflows/dev.yml/badge.svg)](https://github.com/MaxLozada/PasswordProg/actions/workflows/dev.yml)
 
-* [Developmental Deployment](https://p2dev.herokuapp.com/)
+* [Developmental Deployment](https://pwdprogressdev.herokuapp.com/)
 
 
 To Build with docker compose: docker compose up --build

@@ -11,8 +11,8 @@
             <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
             <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
             <p id="number" class="invalid">A <b>number</b></p>
-            <p id="count" class="invalid">Minimum password length <b>6</b></p>
             <p id="special" class="invalid">A <b>special character</b></p>
+            <p id="count" class="invalid">Minimum password length is <b>7</b> & Maximum password length is <b>18</b></p>
             <div class="progress">
                 <div id="p-bar" class="progress-bar" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
@@ -62,6 +62,7 @@
         var number = document.getElementById("number");
         let count = document.getElementById("count");
         let special = document.getElementById("special");
+
         let minCount = 0;
         let specialCount = 0;
         let upperCase = 0;
@@ -77,7 +78,7 @@
             var upperCaseLetters = /[A-Z]/g;
             let numbers = /[0-9]/g;
             let specialCharacters = /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]+/g;
-            let characterCount = passwordForm.length >= 6;
+            let characterCount = /^.{7,18}$/g;
             let newValue;
             let total = 0;
 
@@ -150,8 +151,8 @@
             let newStringWidth = currentWidth.toString();
             newValue = newStringWidth.concat("%");
             progress_bar.style.width = newValue;
+
         }
 
     </script>
 {% endblock %}
-

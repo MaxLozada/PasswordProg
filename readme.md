@@ -10,6 +10,9 @@
 * [Developmental Deployment](https://pwdprogressdev.herokuapp.com/)
 
 
+Status Badge isn't working right now
+
+
 To Build with docker compose: docker compose up --build
 To run tests, Lint, and Coverage report use this command: pytest --pylint --cov
 .pylintrc is the config for pylint, .coveragerc is the config for coverage and setup.py is a config file for pytest

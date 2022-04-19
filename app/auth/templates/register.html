@@ -14,7 +14,7 @@
             <p id="special" class="invalid">A <b>special character</b></p>
             <p id="count" class="invalid">Minimum password length is <b>7</b> & Maximum password length is <b>18</b></p>
             <div class="progress">
-                <div id="p-bar" class="progress-bar" style="width: 0%; background-color: forestgreen" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                <div id="p-bar" class="progress-bar" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
         </div>
 
@@ -22,6 +22,28 @@
     </div>
 
     <style>
+
+        .bar-success {
+          background-color: green;
+        }
+
+        .bar-success80 {
+          background-color: yellowgreen;
+        }
+
+        .bar-success60 {
+          background-color: yellowgreen;
+        }
+
+        .bar-success40 {
+          background-color: orange;
+        }
+
+        .bar-success20 {
+          background-color: orangered;
+        }
+
+
 
         .col-5 {
             padding-top: 75px;
@@ -55,6 +77,7 @@
     </style>
 
     <script>
+
         let passwordForm = document.getElementById("password");
         let letter = document.getElementById("letter");
         let lowerCase = document.getElementById("lowerCase");
@@ -75,14 +98,16 @@
         }
         passwordForm.onkeyup = function () {
             let progress_bar = document.getElementById("p-bar");
+
             let lowerCaseLetters = /[a-z]/g;
             var upperCaseLetters = /[A-Z]/g;
             let numbers = /[0-9]/g;
             let specialCharacters = /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]+/g;
             let characterCount = /^.{7,18}$/g;
+
             let newValue;
             let total = 0;
-            let barColor = 5;
+            let barColor = 20;
 
             if (passwordForm.value.match(lowerCaseLetters)) {
                 lowerCase = 1;
@@ -148,16 +173,84 @@
             total = lowerCase + num + upperCase + minCount + specialCount;
             console.log("total is: " + total);
 
+            let completeSuccess = "100%";
+            let at80 = "80%";
+            let at60 = "60%";
+            let at40 = "40%";
+            let at20 = "20%";
+            let at0 = "0%";
 
             let pBarWidthString = progress_bar.style.width;
             let currentWidth = parseInt(pBarWidthString.substring(0, pBarWidthString.length - 1));
-            currentWidth = 20*total;
+            currentWidth = barColor*total;
             let newStringWidth = currentWidth.toString();
             newValue = newStringWidth.concat("%");
             progress_bar.style.width = newValue;
 
+            if (progress_bar.style.width.match(completeSuccess)){
+                progress_bar.classList.remove("progress-bar");
+                progress_bar.classList.add("bar-success");
+
+            }else{
+                progress_bar.classList.remove("bar-success");
+                progress_bar.classList.add("progress-bar");
+
+            }
+
+            if (progress_bar.style.width.match(at80)){
+                progress_bar.classList.remove("progress-bar");
+                progress_bar.classList.add("bar-success80");
+
+            }else{
+                progress_bar.classList.remove("bar-success80");
+                progress_bar.classList.add("progress-bar");
+
+            }
+
+            if (progress_bar.style.width.match(at60)){
+                progress_bar.classList.remove("progress-bar");
+                progress_bar.classList.add("bar-success60");
+
+            }else{
+                progress_bar.classList.remove("bar-success60");
+                progress_bar.classList.add("progress-bar");
+
+            }
+
+            if (progress_bar.style.width.match(at40)){
+                progress_bar.classList.remove("progress-bar");
+                progress_bar.classList.add("bar-success40");
+
+            }else{
+                progress_bar.classList.remove("bar-success40");
+                progress_bar.classList.add("progress-bar");
+
+            }
+
+            if (progress_bar.style.width.match(at20)){
+                progress_bar.classList.remove("progress-bar");
+                progress_bar.classList.add("bar-success20");
+
+            }else{
+                progress_bar.classList.remove("bar-success20");
+                progress_bar.classList.add("progress-bar");
+
+            }
+
+            if (progress_bar.style.width.match(at0)){
+                progress_bar.classList.remove("progress-bar");
+                progress_bar.classList.add("progress-bar");
+
+            }else{
+                progress_bar.classList.remove("progress-bar");
+                progress_bar.classList.add("progress-bar");
+
+            }
+
+
 
         }
+
 
     </script>
 {% endblock %}
